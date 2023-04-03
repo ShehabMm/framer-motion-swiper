@@ -67,3 +67,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.container, .inner{
+min-height:400px;
+border: 2px solid rgb(151, 125, 125);
+width: 100vw;
+}

@@ -4,6 +4,8 @@ import Number2 from "./pages/number2";
 import Head from "./pages/components/head";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import img1 from './images/2.jpg';
+
 function App() {
   const [name, setname] = useState("aloo");
 
