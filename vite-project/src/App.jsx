@@ -5,7 +5,7 @@ import Head from "./pages/components/head";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
-const arr = ['https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635329/online%20store/black-bowler-hat-on-white-background-vector_n7f2ah.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/800px_COLOURBOX8072182_de1amq.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/istockphoto-1152609532-170667a_wnxcc7.jpg']
+const arr = ['https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635329/online%20store/black-bowler-hat-on-white-background-vector_n7f2ah.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635329/online%20store/black-bowler-hat-on-white-background-vector_n7f2ah.jpg','https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/800px_COLOURBOX8072182_de1amq.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/istockphoto-1152609532-170667a_wnxcc7.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/istockphoto-1152609532-170667a_wnxcc7.jpg']
 
 
 
@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     setm (n.current.scrollWidth - n.current.offsetWidth)
   }, []);
-  const n = useRef()
+  const n = useRef(null)
 
   
   const [name, setname] = useState("aloo");
