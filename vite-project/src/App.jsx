@@ -1,12 +1,25 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Number2 from "./pages/number2";
 import Head from "./pages/components/head";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import img1 from './images/2.jpg';
+
+const arr = ['https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635329/online%20store/black-bowler-hat-on-white-background-vector_n7f2ah.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/800px_COLOURBOX8072182_de1amq.jpg', 'https://res.cloudinary.com/dvytkrzaq/image/upload/v1679635328/online%20store/istockphoto-1152609532-170667a_wnxcc7.jpg']
+
+
+
+
+
 
 function App() {
+  const [m, setm] = useState(0);
+  useEffect(() => {
+    setm (n.current.scrollWidth - n.current.offsetWidth)
+  }, []);
+  const n = useRef()
+
+  
   const [name, setname] = useState("aloo");
 
   // @ts-ignore
@@ -34,14 +47,25 @@ function App() {
 
       <div className="swiper">
 
-        <motion.div className="container">
+        <motion.div ref={n} className="container">
 
 
-          <motion.div className="inner">
+          <motion.div drag="x" dragConstraints={{ right: 0, left: -m }} className="inner">
+
+            {arr.map((item) => {
+              return (
 
 
+                <motion.div className="image-container">
+                  <img src={item} alt="" />
+                </motion.div >
+
+              )
+
+            })}
 
           </motion.div>
+
         </motion.div>
 
       </div>

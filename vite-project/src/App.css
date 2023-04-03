@@ -52,3 +52,36 @@ top:200px;
 .read-the-docs {
   color: #888;
 }
+
+
+.image-container img{
+
+width: 200px;
+height: 300px;
+margin: 30px;
+pointer-events: none;
+
+}
+.inner{
+
+display: flex;
+justify-content: center;
+flex-direction: row;
+cursor:grab;
+
+}
+.swiper{
+display:flex;
+justify-content: center;
+align-items: center;
+width: 60vw;
+
+}
+
+.container{
+
+
+  width: 80% !important;
+  border:2px solid red !important;
+  overflow:hidden ;
+}
