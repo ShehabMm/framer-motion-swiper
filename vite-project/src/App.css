@@ -1,3 +1,8 @@
+body{
+
+
+  background-color: #373535;
+}
 .dark{
 
 background-color: rgba(0, 0, 0, 0.536);
@@ -85,3 +90,4 @@ width: 60vw;
   border:2px solid red !important;
   overflow:hidden ;
 }
+
