@@ -1,32 +1,15 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import Head from './components/head';
+import React from 'react';
 
 const App = () => {
-  const [state, setstate] = useState([]);
-
-  const fetchAxios = async () => {
-    const response = await axios.get("https://fakestoreapi.com/products");
-    setstate(response.data);
-    console.log(state);
-  };
-
-  useEffect(() => {
-    fetchAxios();
-  }, []);
-
   return (
-    <div className="body">
-      {state.map((item) => {
-        return (
-          <div className="container">
+    <div>
+      <Head/>
 
 
-            <img key={item.id} src={item.image} alt="" />
-          </div>
-        );
-      })}
+      fff
     </div>
   );
-};
+}
 
 export default App;
