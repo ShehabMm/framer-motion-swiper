@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
 
-  themes: "",
+  mymood: "dark",
 }
 
 export const counterSlice = createSlice({
@@ -10,7 +10,7 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action) => {
-      state.themes = action.payload
+      state.mymood = action.payload
     },
     // decrement: (state) => {
     //   state.value -= 1
