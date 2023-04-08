@@ -11,6 +11,7 @@ import { useTheme } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { increment } from '../Redux/counterSlice';
+import BasicList from './list';
 
 const Head = () => {
 
@@ -22,7 +23,7 @@ const Head = () => {
   return (
 
 
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ display: "flex", border: "2px solid red", padding: "0, 50px", }}>
 
 
 
@@ -35,42 +36,53 @@ const Head = () => {
 
 
       <AppBar position="static">
-        <Toolbar>
 
+  
+        <Toolbar sx={{}}>
+      
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          >
-            <MenuIcon sx={{ display: { md: "none" } }} />
-          </IconButton>
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          >
+            <MenuIcon sx={{ display: { md: "none" } }} 
+          onClick={()=>{
+
+          
+
+          }} />
+          </IconButton>
+      
+          <Typography variant="h6" component="div" sx={{ flexGrow: 5, ml: 3 }}>
             News
+
+            <IconButton color="inherit" sx={{  }} onClick={() => {
+
+localStorage.setItem("currenMode", theme.palette.mode === "dark" ? "light" : "dark")
+dispatch(increment(theme.palette.mode === "dark" ? "light" : "dark"))
+
+}}  >
+{theme.palette.mode === 'dark' ? <Brightness7Icon sx={{ color: "orange" }} /> : <Brightness4Icon />}
+</IconButton>
+
           </Typography>
 
 
-          <IconButton color="inherit" sx={{ flexGrow: 4 }} onClick={() => {
 
-
-            dispatch(increment(theme.palette.mode === "dark" ? "light" : "dark"))
-
-          }}  >
-            {theme.palette.mode === 'dark' ? <Brightness7Icon sx={{ color: "orange" }} /> : <Brightness4Icon />}
-          </IconButton>
-
-          <Typography variant="h6" component="div" sx={{ flexGrow: 0.2 }}>
+          <Typography variant="h6" component="div" sx={{ mr: 8,display:{xs:"none", md:"block"}  }}>
             About
           </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 0.2 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 0.2, display:{xs:"none", md:"block"}  }}>
             Profile
           </Typography>
 
-          <Button color="inherit">Login</Button>
+          <Button sx={{ ml: 4, display:{xs:"none", md:"block"}  }} color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
+
     </Box>
 
 
