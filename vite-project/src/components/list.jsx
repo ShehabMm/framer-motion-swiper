@@ -8,12 +8,26 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeDisplay } from '../Redux/counterSlice';
+
 
 export default function BasicList() {
+  const dispatch = useDispatch()
+
+
+  // @ts-ignore
+  const { display } = useSelector((state) => state.counter);
+
+
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      <nav aria-label="main mailbox folders">
-        <List>
+    <Box  
+
+    
+    
+    sx={{ width: '50%', maxWidth: 200, bgcolor: 'background.paper', display: display }}>
+      <nav aria-label="main mailbox folders" >
+        <List   >
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -40,9 +54,13 @@ export default function BasicList() {
               <ListItemText primary="Login" />
             </ListItemButton>
           </ListItem>
-        
+
         </List>
       </nav>
     </Box>
   );
+}
+
+function setMobileOpen(arg0) {
+  throw new Error('Function not implemented.');
 }
