@@ -11,7 +11,7 @@ import { useTheme } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { changeDisplay, increment } from '../Redux/counterSlice';
-import BasicList from './list';
+import DrawerOne from './drawer';
 
 const Head = () => {
 
@@ -25,7 +25,7 @@ const Head = () => {
   return (
     <>
 
-      <Box sx={{ display: "flex",  padding: "0, 50px", }}>
+      <Box sx={{ display: "flex", padding: "0, 50px", }}>
 
 
 
@@ -50,13 +50,13 @@ const Head = () => {
               sx={{ mr: 2 }}
 
               onClick={() => {
-                dispatch(changeDisplay("none"?"block":"none"))
+                dispatch(changeDisplay("none"))
 
               }}
             >
 
               <MenuIcon sx={{ display: { md: "none" } }}
-               />
+              />
             </IconButton>
 
             <Typography variant="h6" component="div" sx={{ flexGrow: 5, ml: 3 }}>
@@ -85,10 +85,10 @@ const Head = () => {
             <Button sx={{ ml: 4, display: { xs: "none", md: "block" } }} color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
-
+        <DrawerOne />
       </Box>
 
-      <BasicList     />
+
     </>
   );
 }
