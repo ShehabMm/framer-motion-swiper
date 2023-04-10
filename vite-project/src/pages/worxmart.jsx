@@ -6,6 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Button } from "@mui/material";
+import Statics from "../components/statics";
 
 const Worxmart = () => {
 
@@ -106,10 +107,26 @@ const Worxmart = () => {
 
       </div>
 
+
+
+
+      <div className="footer">
+      <Statics/>
+
+</div>
+
+
+
+
+
+
+
     </div>
 
 
   );
+
+
 };
 
 export default Worxmart;
