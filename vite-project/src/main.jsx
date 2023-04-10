@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from './Redux/store'
 import { Provider } from 'react-redux'
 import New from './pages/new';
+import Worxmart from './pages/worxmart';
 
 
 
@@ -21,7 +22,12 @@ const router = createBrowserRouter([
     element: <New />,
   },
 
+  {
 
+    path: "/Worxmart",
+    element: <Worxmart />
+
+  }
 
 
 
