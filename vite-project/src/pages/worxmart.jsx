@@ -1,8 +1,21 @@
 import React from "react";
 import "./worxmart.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import { Button } from "@mui/material";
 
 const Worxmart = () => {
+
+
+    const [age, setAge] = React.useState('');
+  
+    const handleChange = (event) => {
+      setAge(event.target.value);
+    };
+  
   return (
     <div className="whole">
       <div className="container1">
@@ -54,6 +67,29 @@ const Worxmart = () => {
    to get your job done</h1>
 <p>Find top talens, fast and easy. Connect with the <br/>
   best freelancers and bring your projects to life.</p>
+
+  <FormControl className="select" sx={{backgroundColor:"white", border:"2px solid yellow"}} >
+  <InputLabel id="demo-simple-select-label">Age</InputLabel>
+
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={age}
+    label="Age"
+    onChange={handleChange}
+  >
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
+  <Button>search</Button>
+
+</FormControl>
+
+
+
+
+
 
   <div className="maingImg">
 
