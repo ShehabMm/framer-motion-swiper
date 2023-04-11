@@ -9,9 +9,9 @@
 }
 
 .whole {
-  position: fixed;
+  position: relative;
   width: 100%;
-  height: 70vh;
+  height: 200vh;
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg, rgba(30, 149, 30, 0.991) 0%, rgba(0, 185, 224, 1) 35%, rgba(62, 176, 207, 1) 98%, rgba(0, 212, 255, 1) 100%);
 
@@ -27,6 +27,7 @@
   margin-right: 0;
   position: fixed;
   right: 0;
+
 }
 
 .container1 nav ul {
@@ -330,4 +331,21 @@ background-color: #155750;
 height: 200px;
 bottom: 10px;
 width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.footer p{
+font-size: 2em;
+margin-right: 100px;
+}
+
+.newSection{
+
+background-color: #666666;
+  border:2px solid red;
+  width: 100vw;
+  height: 200vh;
 }

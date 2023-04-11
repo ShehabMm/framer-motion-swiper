@@ -23,9 +23,9 @@ const stats = [
 
 const Statics = () => {
   return (
-    <section className="py-14">
+    <section className="py-14" style={{display:"flex", flexDirection:"row"}}>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <ul className="flex flex-col items-center justify-center gap-x-12 gap-y-10 sm:flex-row sm:flex-wrap md:gap-x-24">
+        <ul  style={{display:"flex", flexDirection:"row"}}  className="flex flex-col items-center justify-center gap-x-12 gap-y-10 sm:flex-row sm:flex-wrap md:gap-x-24">
           {
             stats.map((item, idx) => (
               <li key={idx} className="text-center">

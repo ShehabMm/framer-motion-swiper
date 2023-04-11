@@ -11,13 +11,15 @@ import Statics from "../components/statics";
 const Worxmart = () => {
 
 
-    const [age, setAge] = React.useState('');
-  
-    const handleChange = (event) => {
-      setAge(event.target.value);
-    };
-  
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
+
+    <>
     <div className="whole">
       <div className="container1">
         <nav>
@@ -29,7 +31,7 @@ const Worxmart = () => {
               <button className="myButton">Register</button>
             </li>
             <li>
-            <button className="btnMob">Start</button>
+              <button className="btnMob">Start</button>
 
             </li>
           </ul>
@@ -56,54 +58,54 @@ const Worxmart = () => {
           top: "30px",
           position: "fixed",
           ml: 2,
-          display: {md:"none", xs:"block"},
-          cursor:"pointer"
+          display: { md: "none", xs: "block" },
+          cursor: "pointer"
         }}
       />
 
       <div className="mainContent">
 
 
-<h1>Hire a professional Talent <br/>
-   to get your job done</h1>
-<p>Find top talens, fast and easy. Connect with the <br/>
-  best freelancers and bring your projects to life.</p>
+        <h1>Hire a professional Talent <br />
+          to get your job done</h1>
+        <p>Find top talens, fast and easy. Connect with the <br />
+          best freelancers and bring your projects to life.</p>
 
-  <FormControl className="select" sx={{backgroundColor:"white", border:"2px solid yellow"}} >
-  <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <FormControl className="select" sx={{ backgroundColor: "white", border: "2px solid yellow" }} >
+          <InputLabel id="demo-simple-select-label">Age</InputLabel>
 
-  <Select
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
-    value={age}
-    label="Age"
-    onChange={handleChange}
-  >
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-  </Select>
-  <Button>search</Button>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={age}
+            label="Age"
+            onChange={handleChange}
+          >
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+          <Button>search</Button>
 
-</FormControl>
-
-
+        </FormControl>
 
 
 
 
-  <div className="maingImg">
 
-<img width="400px"  src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681082511/user_aowxl1.png" alt="" />
-</div>
+
+        <div className="maingImg">
+
+          <img width="400px" src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681082511/user_aowxl1.png" alt="" />
+        </div>
 
       </div>
 
       <div className="bar">
-<img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/nsnlogo-1_ias9r0.png" alt="" />
-<img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/MZsolutionlogo-1_kpifty.png" alt="" />
-<img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/Fut-trans-logo-1_zfb1zx.png" alt="" />
-<img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/WhatsApp-Image-2023-02-06-at-1.04-1-1_bujhil.png" alt="" />
+        <img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/nsnlogo-1_ias9r0.png" alt="" />
+        <img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/MZsolutionlogo-1_kpifty.png" alt="" />
+        <img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/Fut-trans-logo-1_zfb1zx.png" alt="" />
+        <img src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1681154825/WhatsApp-Image-2023-02-06-at-1.04-1-1_bujhil.png" alt="" />
 
       </div>
 
@@ -111,10 +113,14 @@ const Worxmart = () => {
 
 
       <div className="footer">
-      <Statics/>
 
-</div>
+        <p>+ 16,000 <br /> Registered talents</p>
 
+        <p>Up to 50% <br /> Cost saving</p>
+
+        <p>+ 200 <br /> Categories</p>
+
+      </div>
 
 
 
@@ -122,6 +128,21 @@ const Worxmart = () => {
 
 
     </div>
+    <div className="newSection">
+
+<p>fffffffffffffffffff</p>
+
+<p></p>
+
+<p></p>
+
+
+
+
+
+</div>
+
+</>
 
 
   );
