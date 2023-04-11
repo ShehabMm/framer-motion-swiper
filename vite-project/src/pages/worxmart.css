@@ -336,7 +336,7 @@ nav ul li .myButton login {
   background-color: #155750;
   height: 200px;
   bottom: -150px;
-  width: 100vw;
+  width: 99vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,10 +349,10 @@ nav ul li .myButton login {
 }
 
 .newSection {
-  position: ab;
-  background-color: #666666;
-  border: 2px solid red;
-  width: 100vw;
+  position: relative;
+  background-color: #4e0f0f;
+  width: 99vw;
   height: 200vh;
-  top: 800px;
+  top:39%;
+  
 }

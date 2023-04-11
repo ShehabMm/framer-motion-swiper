@@ -6,7 +6,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
-import Wiper from "../components/wiper";
+import SwipeableTextMobileStepper from "../components/SwipeableTextMobileStepper";
 
 const Worxmart = () => {
   const [age, setAge] = React.useState("");
@@ -132,7 +132,7 @@ const Worxmart = () => {
         </div>
       </div>
       <div className="newSection">
-        <Wiper />
+        <SwipeableTextMobileStepper/>
       </div>
     </div>
   );
