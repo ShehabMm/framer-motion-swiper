@@ -38,7 +38,15 @@ const router = createBrowserRouter([
 
 
 
-
+const mongoose = require('mongoose');
+ 
+mongoose.connect("mongodb+srv://shehab:<password>@cluster0.ltfvz.mongodb.net/?retryWrites=true&w=majority")
+  .then( result => {
+    main.listen(3000);
+  })
+  .catch( err => {
+    console.log(err);
+  }); 
 
 
 
