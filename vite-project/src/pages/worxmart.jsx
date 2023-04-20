@@ -133,9 +133,29 @@ const Worxmart = () => {
       </div>
       <div className="newSection">
 
-{/* //mongoose  */}
+        <div className="anotherSection">
 
- 
+          <div className="box">
+            <h2>Learn HTML</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
+            <a href="#">show more</a>
+          </div>
+          <div className="box">
+            <h2>Learn CSS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
+            <a href="#">show more</a>
+
+          </div>
+          <div className="box">
+            <h2>Learn React</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
+            <a href="#">show more</a>
+
+          </div>
+
+
+        </div>
+
 
 
       </div>

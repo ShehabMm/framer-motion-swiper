@@ -354,5 +354,58 @@ nav ul li .myButton login {
   width: 99vw;
   height: 200vh;
   top:39%;
-  
+  border:2px solid white;
+
+
+}
+
+.anotherSection{
+
+width: 80%;
+height: 60vh;
+margin-top: 100px !important;
+margin-left: 10%;
+display:flex;
+gap:50px;
+flex-wrap: wrap;
+
+}
+
+.box{
+
+width: 400px;
+  border:1px solid white;
+  border-left: 4px solid white;
+  height: 150px;
+  border-radius: 5px;
+  padding:5px 10px;
+}
+
+.box h2{
+
+  text-align: center;
+  margin-bottom: 20px;
+}
+.box a{
+
+float:right;
+text-decoration: underline;
+font-weight: 700;
+
+}
+
+.box:hover{
+
+  border:2px solid white;
+  border-left: 8px solid white;
+  transition: all 0.1s;
+
+
+}
+
+.box:hover h2{
+
+font-weight: 700;
+color:#f29c93
+
 }
