@@ -7,6 +7,7 @@ import { store } from './Redux/store'
 import { Provider } from 'react-redux'
 import New from './pages/new';
 import Worxmart from './pages/worxmart';
+import CreateElement from './pages/createElement';
 
 
 
@@ -26,6 +27,13 @@ const router = createBrowserRouter([
 
     path: "/Worxmart",
     element: <Worxmart />
+
+  }, 
+
+  {
+path:"/createElement", 
+element:<CreateElement/>
+
 
   }
 

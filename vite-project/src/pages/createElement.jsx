@@ -6,15 +6,15 @@ import "./createElemnt.css";
 const CreateElement = () => {
   return (
     <div>
-      <form action="">
+      <form action="/createElement" method="POST">
         <label htmlFor="">Article Title:</label>
-        <input type="text" required />
+        <input name="title" type="text" required />
 
         <label htmlFor="">Article Summary:</label>
-        <input type="text" required />
+        <input name="detail" type="text" required />
 
         <label htmlFor="">Article Body</label>
-<textarea  ></textarea>
+<textarea name="body" ></textarea>
         <button>Create</button>
       </form>
     </div>
