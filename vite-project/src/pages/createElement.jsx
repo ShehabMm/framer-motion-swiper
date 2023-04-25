@@ -6,7 +6,7 @@ import "./createElemnt.css";
 const CreateElement = () => {
   return (
     <div>
-      <form action="/createElement" method="POST">
+      <form action="/Worxmart" method="POST">
         <label htmlFor="">Article Title:</label>
         <input name="name" type="text" required />
 
