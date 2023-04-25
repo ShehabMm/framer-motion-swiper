@@ -22,11 +22,6 @@ const productSchema = mongoose.schema(
     },
 
 
-    image:
-    {
-      type: String
-
-    }
 
 
   },

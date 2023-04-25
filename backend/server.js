@@ -11,7 +11,16 @@ app.get("/", (req, res) => {
 
 app.get("/api", (req, res) => {
   res.send("Hello api!");
-});
+}); 
+
+app.get('/lolo', (req, res)=>{
+  res.send("Hello lolo!");
+
+
+
+}
+)
+
 
 
 
