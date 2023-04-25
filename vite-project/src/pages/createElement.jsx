@@ -8,14 +8,16 @@ const CreateElement = () => {
     <div>
       <form action="/createElement" method="POST">
         <label htmlFor="">Article Title:</label>
-        <input name="title" type="text" required />
+        <input name="name" type="text" required />
 
         <label htmlFor="">Article Summary:</label>
-        <input name="detail" type="text" required />
+        <input name="type" type="text" required />
 
         <label htmlFor="">Article Body</label>
-<textarea name="body" ></textarea>
-        <button>Create</button>
+<textarea name="price" ></textarea>
+        <button onClick={(eo) => {
+          eo.preventDefault()
+        }}>Create</button>
       </form>
     </div>
   );

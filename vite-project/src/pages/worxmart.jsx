@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./worxmart.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import FormControl from "@mui/material/FormControl";
@@ -7,6 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import CreateElement from "./createElement";
+import axios from "axios";
 
 
 const Worxmart = () => {
@@ -15,6 +16,14 @@ const Worxmart = () => {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+const [backend, setbackend] = useState([]);
+  useEffect(() => {
+    const fetchdata = async () => {
+      const data = await axios.get("http://localhost:8080/api")
+      setbackend(data)
+    }
+    fetchdata()
+  }, );
 
   return (
     <div className="body">
@@ -136,6 +145,15 @@ const Worxmart = () => {
 
         <div className="anotherSection">
 
+
+{backend.map((item) => {
+  
+<h1>{item.name}</h1>
+console.log(backend)
+
+
+})}
+
           <div className="box">
             <h2>Learn HTML</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
@@ -157,11 +175,11 @@ const Worxmart = () => {
 
         </div>
         <button onClick={() => {
-          
+
 
 
         }}>create new</button>
-        <CreateElement/>
+        <CreateElement />
       </div>
     </div>
   );
