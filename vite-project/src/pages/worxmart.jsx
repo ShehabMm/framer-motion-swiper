@@ -16,14 +16,7 @@ const Worxmart = () => {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-const [backend, setbackend] = useState([]);
-  useEffect(() => {
-    const fetchdata = async () => {
-      const data = await axios.get("http://localhost:8080/api")
-      setbackend(data)
-    }
-    fetchdata()
-  }, );
+
 
   return (
     <div className="body">
@@ -146,13 +139,7 @@ const [backend, setbackend] = useState([]);
         <div className="anotherSection">
 
 
-{backend.map((item) => {
-  
-<h1>{item.name}</h1>
-console.log(backend)
 
-
-})}
 
           <div className="box">
             <h2>Learn HTML</h2>
