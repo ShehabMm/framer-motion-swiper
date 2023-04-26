@@ -10,7 +10,7 @@ const articleSchema = new Schema({
  
  
 // Create a model based on that schema
-const Article = mongoose.model("Article", articleSchema);
+const Article = mongoose.model("articles", articleSchema);
  
  
 // export the model
