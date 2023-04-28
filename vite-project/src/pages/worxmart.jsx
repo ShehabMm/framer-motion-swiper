@@ -34,6 +34,8 @@ const Worxmart = () => {
 
 return (
   <div className="body">
+
+
     <div className="whole">
       <div className="container1">
         <nav>
@@ -159,7 +161,7 @@ return (
 
     <div  className="box" key={i}>
     <h2 >{item.title}</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
+    <p>{item.summary}</p>
     <a href="#">show more</a>
   </div>
 
