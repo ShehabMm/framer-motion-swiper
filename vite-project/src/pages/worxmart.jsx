@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import CreateElement from "./createElement";
-import Axios from "axios";
+import Axios  from "axios";
 
 
 const Worxmart = () => {
@@ -16,10 +16,21 @@ const Worxmart = () => {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-  const [backend, setbackend] = useState([]);
 
+  const [list, setlist] = useState([]);
 
-  
+  useEffect(() => {
+
+    Axios.get('http://localhost:5000/api').then((res) => {
+      res.data
+      console.log(res.data )
+      setlist(res.data)
+
+    })
+
+  }, []);
+
+       
 
 return (
   <div className="body">
@@ -142,13 +153,24 @@ return (
       <div className="anotherSection">
 
 
+{ list.map((item, i) => {
+  return(   
 
 
-        <div className="box">
-          <h2>Learn HTML</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
-          <a href="#">show more</a>
-        </div>
+    <div  className="box" key={i}>
+    <h2 >{item.title}</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
+    <a href="#">show more</a>
+  </div>
+
+
+
+  )
+})
+
+
+}
+
         <div className="box">
           <h2>Learn CSS</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>

@@ -3,10 +3,10 @@ const app = express();
 const port = 5000;
 const mongoose = require("mongoose");
 const Article = require("./models/productModel.js");
-
+const cors = require('cors')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use( cors())
 // routes
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -16,7 +16,10 @@ app.get("/api", (req, res) => {
   Article.find().then((result) => {
     res.json(result);
 
-  }).catch()
+  }).catch((err) => {
+    res.json(err);
+
+  })
 });
 
 app.post("/lolo", (req, res) => {
