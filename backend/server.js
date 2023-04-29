@@ -22,11 +22,11 @@ app.get("/api", (req, res) => {
   })
 });
 
-app.post("/lolo", async (req, res) => {
+app.post("/lolo",  (req, res) => {
 
   const user = req.body
   const article = new Article(user);
-  await article.save()
+   article.save()
   res.json(user)
 
 });

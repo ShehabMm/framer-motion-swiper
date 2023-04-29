@@ -179,11 +179,6 @@ return (
 
 
       </div>
-      <button onClick={() => {
-
-
-
-      }}>create new</button>
       <CreateElement />
     </div>
   </div>
