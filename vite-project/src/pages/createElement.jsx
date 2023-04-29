@@ -13,32 +13,33 @@ const CreateElement = () => {
   const createNew = (eo) => {
     eo.preventDefault()
     Axios.post("  http://localhost:5000/lolo", { title, summary, body, }).then((result) => {
-      alert("user created")
 
-      
+      settitle("")
+      setsummary("")
+      setbody("")
     })
   }
 
 
   return (
-    <div>
+    <div className="containerForm">
       <form action="/Worxmart" method="POST">
         <label htmlFor="">Article Title:</label>
         <input onChange={(eo) => {
 
           settitle(eo.target.value)
 
-        }} placeholder="title" type="text" required />
+        }}  value={title}  placeholder="title" type="text" required />
 
         <label htmlFor="">Article Summary:</label>
         <input onChange={(eo) => {
           setsummary(eo.target.value)
-        }} placeholder="summary" name="summary" type="text" required />
+        }}  value={summary}  placeholder="summary" name="summary" type="text" required />
 
         <label htmlFor="">Article Body</label>
         <textarea onChange={(eo) => {
           setbody(eo.target.value)
-        }} placeholder="body" name="body" ></textarea>
+        }}  value={body}          placeholder="body" name="body" ></textarea>
         <button onClick={createNew}>Create</button>
       </form>
     </div>

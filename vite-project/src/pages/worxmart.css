@@ -10,7 +10,7 @@
 
 .body {
 
-  height: 300vh;
+  height: 180vh;
 
 }
 
@@ -352,9 +352,8 @@ nav ul li .myButton login {
   position: relative;
   background-color: #4e0f0f;
   width: 99vw;
-  height: 200vh;
+  height: 100vh;
   top:39%;
-  border:2px solid white;
 
 
 }
@@ -362,12 +361,16 @@ nav ul li .myButton login {
 .anotherSection{
 
 width: 80%;
-height: 60vh;
-margin-top: 100px !important;
+height: 100vh;
+margin-top: 80px !important;
 margin-left: 10%;
 display:flex;
-gap:50px;
+justify-content: center;
+gap:20px;
+align-items: center;
 flex-wrap: wrap;
+overflow: auto;
+top: 50px !important;
 
 }
 
@@ -379,6 +382,7 @@ width: 400px;
   height: 150px;
   border-radius: 5px;
   padding:5px 10px;
+  position: relative;
 }
 
 .box h2{
@@ -408,4 +412,41 @@ font-weight: 700;
 font-weight: 700;
 color:#f29c93
 
+}
+
+.last{
+
+width: 500px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+
+
+}
+
+.remove {
+	position:absolute;
+  box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:33px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:5px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+  bottom:-10px;
+  right:0;
+}
+.remove:hover {
+	background-color:#ee1d0e;
+}
+.remove:active {
+
+  transition: all 1s;
 }
