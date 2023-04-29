@@ -6,7 +6,7 @@ const Article = require("./models/productModel.js");
 const cors = require('cors')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use( cors())
+app.use(cors())
 // routes
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -22,16 +22,13 @@ app.get("/api", (req, res) => {
   })
 });
 
-app.post("/lolo", (req, res) => {
-  const article = new Article(req.body);
-  article
-    .save()
-    .then((result) => {
-      res.send("Hello lolo!");
-    })
-    .catch((params) => {
-      console.log(err);
-    });
+app.post("/lolo", async (req, res) => {
+
+  const user = req.body
+  const article = new Article(user);
+  await article.save()
+  res.json(user)
+
 });
 
 mongoose

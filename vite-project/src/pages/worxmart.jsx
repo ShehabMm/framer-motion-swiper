@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import "./worxmart.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import FormControl from "@mui/material/FormControl";
@@ -9,8 +10,8 @@ import { Button } from "@mui/material";
 import CreateElement from "./createElement";
 import Axios  from "axios";
 
-
 const Worxmart = () => {
+
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
@@ -34,6 +35,9 @@ const Worxmart = () => {
 
 return (
   <div className="body">
+
+
+
 
 
     <div className="whole">
@@ -162,7 +166,6 @@ return (
     <div  className="box" key={i}>
     <h2 >{item.title}</h2>
     <p>{item.summary}</p>
-    <a href="#">show more</a>
   </div>
 
 
@@ -173,18 +176,6 @@ return (
 
 }
 
-        <div className="box">
-          <h2>Learn CSS</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
-          <a href="#">show more</a>
-
-        </div>
-        <div className="box">
-          <h2>Learn React</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit!</p>
-          <a href="#">show more</a>
-
-        </div>
 
 
       </div>
