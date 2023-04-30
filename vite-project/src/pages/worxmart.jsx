@@ -28,10 +28,11 @@ const Worxmart = () => {
   }, []);
 
 
-  const remove = ( eo, id ) => {
-    eo.preventDefault()
-    Axios.delete(`http://localhost:5000/api/:id`).then((res) => {
+  const remove = (id) => {
+    Axios.delete(`http://localhost:5000/api/${id}`).then((res) => {
       console.log(res.data)
+      setlist(res.data);
+
     })
   }
 
@@ -159,9 +160,9 @@ const Worxmart = () => {
                 <div className="box" key={i}>
                   <h2>{item.title}</h2>
                   <p>{item.summary}</p>
-                  <button data-id="item._id" onClick={ (e)=>{
+                  <button onClick={() => {
 
-remove(e, item._id)
+                    remove(item._id)
 
                   }} className="remove">Remove</button>
                 </div>

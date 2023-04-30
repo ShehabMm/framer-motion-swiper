@@ -32,9 +32,12 @@ app.post("/lolo",  (req, res) => {
 });
 
 
-app.delete("/api:id" , (req, res) => {
-  res.send("done")
-} )
+app.delete('/delete/:id' , (req, res) => {
+  const id = req.params.id
+   Article.findByIdAndRemove(id).exec()
+   res.send("deleted")
+ 
+ } )
 mongoose
   .connect(
     "mongodb://shehab:12345678910@cluster0-shard-00-00.ltfvz.mongodb.net:27017,cluster0-shard-00-01.ltfvz.mongodb.net:27017,cluster0-shard-00-02.ltfvz.mongodb.net:27017/ecoomercedb?ssl=true&replicaSet=atlas-y3lm03-shard-0&authSource=admin&retryWrites=true&w=majority"
