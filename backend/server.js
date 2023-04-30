@@ -32,9 +32,9 @@ app.post("/lolo",  (req, res) => {
 });
 
 
-app.delete('/delete/:id' , (req, res) => {
+app.delete('/delete/:id' , async (req, res) => {
   const id = req.params.id
-   Article.findByIdAndRemove(id).exec()
+   await Article.findByIdAndRemove(id).exec()
    res.send("deleted")
  
  } )

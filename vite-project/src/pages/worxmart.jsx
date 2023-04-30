@@ -9,8 +9,10 @@ import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import CreateElement from "./createElement";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Worxmart = () => {
+  const navigate = useNavigate()
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
@@ -29,10 +31,10 @@ const Worxmart = () => {
 
 
   const remove = (id) => {
-    Axios.delete(`http://localhost:5000/api/${id}`).then((res) => {
+    Axios.delete(`http://localhost:5000/delete/${id}`).then((res) => {
       console.log(res.data)
-      setlist(res.data);
-
+      setlist([res.data]);
+navigate("/Worxmart")
     })
   }
 
@@ -163,7 +165,7 @@ const Worxmart = () => {
                   <button onClick={() => {
 
                     remove(item._id)
-
+console.log(item)
                   }} className="remove">Remove</button>
                 </div>
               );
